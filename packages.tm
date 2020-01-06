@@ -49,6 +49,7 @@ r                            # When scientific data matters to you
 python                       # Good ol' python
 dash                         # bash, but less bloated
 zsh                          # The superior shell
+zsh-syntax-highlighting
 
 # Markdown Utilities
 texlive-core                 # The Core of LaTeX
@@ -77,3 +78,17 @@ network-manager-applet       # Network Manager Applet
 youtube-dl                   # Download youtube videos
 id3v2                        # Tag editor for music
 kdeconnect                   # Android phone just love linux connectivity
+yadm                         # Dotfiles manager
+python-pip                   # Requirement for git-remote-dropbox
+acpi                         # Laptop battery utility
+dunst                        # Good looking notifications
+expressvpn                   # To remain secure
+flashfocus-git               # To stop relying on bulky i3 borders
+gotop
+neofetch
+htop
+thefuck
+alsa
+alsa-utils
+pa-applet-git
+xcape                        # Allows to remap tapping AND holding keys

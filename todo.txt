@@ -1,0 +1,14 @@
+# Install python packages
+```
+pip install --user neovim
+pip install --user gi-remote-dropbox
+pip install --user goobook
+```
+
+# Clone and make my build of st
+
+# Add ~/.local/bin to path
+
+# Start expressvpn through systemctl
+
+# Setup u2f yubikey thing with 70-u2f.rules
