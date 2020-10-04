@@ -4,17 +4,14 @@
 nerd-fonts-complete          # Cause you want those nerdy icons everywhere
 
 # Desktop Environment
-i3-gaps-rounded-git          # i3-gaps, but with rounded corner goodness
-polybar                      # Universal WM statusbar
-nitrogen                     # Wallpaper manager
-lightdm                      # Screen Lock
-compton                      # The good compositor
-rofi                         # Cooler dmenu
+xorg                         # xorg utilities
+xorg-server
+xorg-xinit
+picom-rounded-corners        # The good compositor
 
 # File viewers
 sxiv                         # Simple X Image viewer
 mpv                          # Minimal player for videos
-vlc                          # VLC ALWAYS WORKS...
 zathura                      # Document viewer base
 zathura-ps                   # Adds PostScript to zathura
 zathura-pdf-mupdf            # Adds pdf to zathura
@@ -28,19 +25,14 @@ libreoffice-still            # For those pesky word documents
 
 # Utilities
 tmux                         # Terminal multiplexer (Run terminal windows as background processes)
-lolcat                       # Taste the rainbow
-cowsay                       # Cause you want a talking cow on your system
 mutt-wizard-git              # A true wizard for configuring neomutt
 firefox                      # The sensible web browser
-tmatrix-git                  # For when you have that matrix vibe
 
 #TUIs
 neomutt                      # New mutt email browser
 newsboat                     # RSS manager
-ncmpcpp                      # A genuinely good music player
-spotify-tui                  # Tui client for spotify (requires th gui)
-ranger                       # Beautiful file manager with image preview
-mps-youtube                  # Youtube TUI
+vifm                         # Beautiful file manager
+youtube-viewer               # Youtube TUI
 
 
 # Languages
@@ -63,12 +55,10 @@ biber                        # UTF-8 capable alternative to bibtex
 pandoc                       # Swiss army knife of document conversion and compilation
 
 # Daemons and others
-mpd                          # Music player daemon
 entr                         # Execute stuff when files change
 cronie                       # Run cron jobs (automated redular tasks)
 hplip                        # HP Printers Configurator
 cups                         # Another Printing Dependency
-base-devel                   # Get all the makepkg and sudo goodness
 protonmail-bridge            # Daemon for ProtonMail
 python-ueberzug              # View images in terminal applications
 dropbox                      # Because my life is on dropbox
