@@ -32,11 +32,16 @@ libreoffice-still            # For those pesky word documents
 tmux                         # Terminal multiplexer (Run terminal windows as background processes)
 mutt-wizard-git              # A true wizard for configuring neomutt
 firefox                      # The sensible web browser
+mlocate                      # updatedb and locate
 
 #TUIs
 neomutt                      # New mutt email browser
 newsboat                     # RSS manager
 vifm                         # Beautiful file manager
+ffmpegthumbnailer
+fontpreview-git
+epub-thumbnailer-git
+bat
 youtube-viewer               # Youtube TUI
 
 
@@ -44,6 +49,8 @@ youtube-viewer               # Youtube TUI
 go                           # What the cool kids use
 r                            # When scientific data matters to you
 python                       # Good ol' python
+python-pip
+python-setup-tools
 dash                         # bash, but less bloated
 zsh                          # The superior shell
 zsh-syntax-highlighting

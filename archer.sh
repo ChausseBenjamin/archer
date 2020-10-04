@@ -69,5 +69,13 @@ sudo cp $dir/70-u2f.rules /etc/udev/rules.d/
 echo Setting up time
 sudo timedatectl set-ntp true
 
+echo Setting up cronjobs
+echo "0 * * * * dwmbar" >> /var/spool/cron/master
+echo "0 * * * * newsup" >> /var/spool/cron/master
+echo "*/30 * * * * updatedb" >> /var/spool/cron/root
+
+echo Installing Goobook
+pip install --user goobook
+
 echo Setting up the wallpaper
 cp $pwd/wall.jpg ~/.cache/wall.png/
