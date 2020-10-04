@@ -2,12 +2,17 @@
 
 # Fonts
 nerd-fonts-complete          # Cause you want those nerdy icons everywhere
+spleen-font                  # Monospaced bitmap font
 
 # Desktop Environment
 xorg                         # xorg utilities
 xorg-server
 xorg-xinit
+xwallpaper                   # Wallpaper utility
+xsel                         # Clipboard utility
 picom-rounded-corners        # The good compositor
+flashfocus                   # Flash windows when they gets focused
+sxhkd
 
 # File viewers
 sxiv                         # Simple X Image viewer
@@ -62,7 +67,6 @@ cups                         # Another Printing Dependency
 protonmail-bridge            # Daemon for ProtonMail
 python-ueberzug              # View images in terminal applications
 dropbox                      # Because my life is on dropbox
-xsel                         # Clipboard manager
 networkmanager               # You can read dude...
 network-manager-applet       # Network Manager Applet
 youtube-dl                   # Download youtube videos

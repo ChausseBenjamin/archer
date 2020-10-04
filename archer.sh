@@ -16,7 +16,7 @@ sudo pacman -S --noconfirm git base-devel
 cd /tmp
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
-makepkg -sir 
+makepkg -sir
 
 echo Adding the candy flair to pacman
 sudo echo ILoveCandy >> /etc/pacman.conf
@@ -41,7 +41,8 @@ cd fiche && make && sudo make install
 puburl="$(cat ~/id_rsa.pub | nc termbin.com 9999)"
 printf "You may want to give this computer access to your git server...\n
 	add the newly created public key to your server.\n
-	You can access it here: $puburl"
+	You can access it here: $puburl\n
+	Consider adding this public key to your dropbox account."
 read -p "Press enter to continue"
 
 
@@ -53,9 +54,20 @@ do
 	cd $i && make && sudo make install
 done
 
+echo Setting up vim-Plug - neovim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+nvim +PlugInstall +qall > /dev/null
+
 echo Set dash as the default shell for sh scripts
 sudo rm /usr/bin/sh
-ln -s $(which dash) /usr/bin/sh
+sudo ln -s $(which dash) /usr/bin/sh
+
+echo Enabling Yubikey support in firefox
+sudo cp $dir/70-u2f.rules /etc/udev/rules.d/
+
+echo Setting up time
+sudo timedatectl set-ntp true
 
 echo Setting up the wallpaper
-cp $pwd && cp wall.jpg ~/.config/
+cp $pwd/wall.jpg ~/.cache/wall.png/
