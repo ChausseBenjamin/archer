@@ -70,9 +70,8 @@ echo Setting up time
 sudo timedatectl set-ntp true
 
 echo Setting up cronjobs
-echo "0 * * * * dwmbar" >> /var/spool/cron/master
-echo "0 * * * * newsup" >> /var/spool/cron/master
-echo "*/30 * * * * updatedb" >> /var/spool/cron/root
+cd $dir
+cat crontab  >> /var/spool/cron/master
 
 echo Installing Goobook
 pip install --user goobook
