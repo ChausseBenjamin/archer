@@ -1,10 +1,15 @@
 # Update mutt wizard mail
-*/2 * * * * /usr/bin/mw sync
+*/2 * * * * /usr/bin/mbsync -a
 # Update RSS feeds and update dwmblocks
 0 * * * * $HOME/.local/bin/newsup
-# Update dotfiles in status bar (signal 5 + 34)
-1 * * * * kill -39 $(pidof dwmblocks)
-# Update time in status bar (signal 6 + 34)
-* * * * * kill -40 $(pidof dwmblocks)
+# Update dotfiles in status bar (signal 7 + 34)
+1 * * * * kill -41 $(pidof dwmblocks)
+# Update time in status bar (signal 8 + 34)
+* * * * * kill -42 $(pidof dwmblocks)
 # Update battery in status bar (signal 1 + 34)
 * * * * * kill -35 $(pidof dwmblocks)
+# Update vpn in status bar (signal 2 + 34)
+* * * * * kill -36 $(pidof dwmblocks)
+# Update date in status bar (signal 6 + 34)
+0 0 * * * kill -40 $(pidof dwmblocks)
+
