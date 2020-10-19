@@ -38,19 +38,21 @@ git clone https://github.com/solusipse/fiche.git
 cd fiche && make && sudo make install
 
 # Pause to add public key to server
-puburl="$(cat ~/id_rsa.pub | nc termbin.com 9999)"
+puburl="$(cat ~/.ssh/id_rsa.pub | nc termbin.com 9999)"
 printf "You may want to give this computer access to your git server...\n
 	add the newly created public key to your server.\n
 	You can access it here: $puburl\n
-	Consider adding this public key to your dropbox account."
+	or as a qr code:\n"
+qr $puburl
+printf "Consider adding this public key to your dropbox account.\n"
 read -p "Press enter to continue"
 
 
 echo Installing my builds of suckless utilities
-for i in dmenu dwm st slock sent
+for i in dmenu dwm st slock sent dwmblocks
 do
 	cd /tmp
-	git clone https://git.chausse.xyz/$i
+	git clone git://git.chausse.xyz/$i
 	cd $i && make && sudo make install
 done
 

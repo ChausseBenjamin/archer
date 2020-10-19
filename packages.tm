@@ -18,6 +18,7 @@ sxhkd
 # File viewers
 sxiv                         # Simple X Image viewer
 mpv                          # Minimal player for videos
+vlc                          # For my terminal based podcasts
 zathura                      # Document viewer base
 zathura-ps                   # Adds PostScript to zathura
 zathura-pdf-mupdf            # Adds pdf to zathura
@@ -36,6 +37,11 @@ firefox                      # The sensible web browser
 mlocate                      # updatedb and locate
 tcc                          # Tiny C Compiler
 find-cursor                  # Flashes the cursor to easily find it
+python-qrcode                # Generate ASCII qr codes
+rsync                        # SSH file transfers
+task-spooler                 # queue tasks
+urlscan                      # url selector
+scrot                        # Screenshots
 
 #TUIs
 neomutt                      # New mutt email browser

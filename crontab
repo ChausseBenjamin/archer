@@ -12,4 +12,3 @@
 * * * * * kill -36 $(pidof dwmblocks)
 # Update date in status bar (signal 6 + 34)
 0 0 * * * kill -40 $(pidof dwmblocks)
-
