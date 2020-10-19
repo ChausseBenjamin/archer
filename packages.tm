@@ -42,6 +42,7 @@ rsync                        # SSH file transfers
 task-spooler                 # queue tasks
 urlscan                      # url selector
 scrot                        # Screenshots
+man                          # Manual pages
 
 #TUIs
 neomutt                      # New mutt email browser
@@ -60,7 +61,7 @@ go                           # What the cool kids use
 r                            # When scientific data matters to you
 python                       # Good ol' python
 python-pip                   # Python package manager
-python-setup-tools           # Python dev-tools
+python-setuptools            # Python dev-tools
 dash                         # bash, but less bloated
 zsh                          # The superior shell
 zsh-syntax-highlighting

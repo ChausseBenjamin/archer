@@ -5,7 +5,7 @@ user="master"
 dir=$(pwd)
 
 echo Remove the dumb beep sound
-echo blacklist pcspkr >> /etc/modprobe.d/blacklist
+sudo echo blacklist pcspkr >> /etc/modprobe.d/blacklist
 
 echo Configuring ssh
 mkdir -p ~/.ssh
@@ -13,18 +13,16 @@ ls ~/.ssh | grep id_rsa.pub || ssh-keygen -t rsa -b 4096 -C "benjamin@chausse.xy
 
 echo Installing yay
 sudo pacman -S --noconfirm git base-devel
-cd /tmp
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
 makepkg -sir
+cd $dir
 
 echo Adding the candy flair to pacman
-sudo echo ILoveCandy >> /etc/pacman.conf
-sudo sed -i 's/#Color$/Color/g' /etc/pacman.conf
+sudo sed -i 's/#Color$/Color\nILoveCandy/g' /etc/pacman.conf
 
 echo Installing packages
-packages=$(sed "s/#.*$//; /^$/d" packages.tm)
-yay -S --noconfirm $packages
+yay -S --noconfirm $(cat packages.tm | sed 's/#.*//g')
 
 echo Installing R essential packages
 for f in xtable ggplot2 plot3D
@@ -33,9 +31,8 @@ for f in xtable ggplot2 plot3D
 done
 
 echo Installing fiche for terminal pastebins
-cd /tmp
-git clone https://github.com/solusipse/fiche.git
-cd fiche && make && sudo make install
+git clone https://github.com/solusipse/fiche.git /tmp/fiche
+cd /tmp/fiche && make && sudo make install
 
 # Pause to add public key to server
 puburl="$(cat ~/.ssh/id_rsa.pub | nc termbin.com 9999)"
@@ -80,3 +77,6 @@ pip install --user goobook
 
 echo Setting up the wallpaper
 cp $pwd/wall.jpg ~/.cache/wall.png/
+
+echo setting up dotfiles with yadm
+yadm clone git://git.chausse.xyz/dotfiles
