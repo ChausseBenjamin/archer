@@ -9,7 +9,7 @@ echo blacklist pcspkr >> /etc/modprobe.d/blacklist
 
 echo Configuring ssh
 mkdir -p ~/.ssh
-ls ~/.ssh | grep id_rsa.pub || ssh-keygen -t rsa -b 4096 -C "benjamin@chausse.xyz" -q -N ""
+ls ~/.ssh | grep id_rsa.pub || ssh-keygen -t rsa -b 4096 -C "benjamin@chausse.xyz" -q -N "" -f $HOME/.ssh/id_rsa
 
 echo Installing yay
 sudo pacman -S --noconfirm git base-devel
